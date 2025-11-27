@@ -23,7 +23,6 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow-y: auto;
     border: 1px solid black;
     border-radius: 14px;
     /* padding: 10px 14px;
@@ -45,12 +44,39 @@ body{
 
 .box-question .status{
     width: 120px;
-    background-color: red;
+    /* background-color: red; */
     text-align: center;
     align-content: center;
 }
 
 .box-question .question{
     flex: 1;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
+
+.box-question>.box-content{
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+.box-question>.box-content>.box-row{
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+    align-items: center;
+    display: flex;
+}
+
+.box-question>.box-content>.box-row:hover{
+    cursor: pointer;
+}
+
+.box-question>.box-content>.box-row+.box-row{
+    margin-top: 10px;
+}
+
+/* .box-question>.box-content>.box-row>.question{
+    padding: 15px 10px;
+    box-sizing: border-box;
+} */
